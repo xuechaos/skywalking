@@ -149,7 +149,8 @@ public class AgentClassLoader extends ClassLoader {
                 }
             }
         }
-        throw new ClassNotFoundException("Can't find " + name);
+
+        return getDefault().findClass(name);
     }
 
     @Override
